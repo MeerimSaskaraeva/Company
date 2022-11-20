@@ -50,19 +50,14 @@ public abstract class Person {
     abstract double  period(Group group);
 
     public static void sortAge(Person[]people) {
-
+        int[] allAge=new int[people.length];
         int counter=0;
         for (Person person : people) {
-            if (person.getAge()<50 ) {
-                counter++;
-                int[] ages = new int[counter];
-                for (int i = 0,j=0; i < ages.length; i++) {
-                    ages[j]=people[i].getAge();j++;}
-                Arrays.sort(ages);
-                System.out.println(Arrays.toString(ages));
-            }
-        }
-        System.out.println("Qty people: "+people.length);
+            allAge[counter]= person.getAge();
+            counter++;}
+            System.out.println(Arrays.toString(allAge));
+        System.out.println("qty people: "+people.length);
+
 
     }
     @Override
