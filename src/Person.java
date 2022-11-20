@@ -55,6 +55,7 @@ public abstract class Person {
         for (Person person : people) {
             allAge[counter]= person.getAge();
             counter++;}
+        Arrays.sort(allAge);
             System.out.println(Arrays.toString(allAge));
         System.out.println("qty people: "+people.length);
 
